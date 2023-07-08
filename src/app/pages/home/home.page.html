@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>home</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        <ion-badge
+          color="danger"
+          style="position: absolute; right: -5px; top: -2px"
+          >3</ion-badge
+        >
+      </ion-button>
+      <ion-button routerLink="user" routerDirection="forward">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> This is home </ion-content>

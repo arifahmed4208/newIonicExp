@@ -1,0 +1,71 @@
+<!-- <ion-header [translucent]="true"> -->
+<ion-toolbar no-border-bottom mode="md" class="ion-no-border">
+  <ion-buttons slot="start">
+    <ng-content></ng-content>
+  </ion-buttons>
+
+  <ion-title>{{ page }}</ion-title>
+
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      <ion-badge color="danger" class="notification-dot">&nbsp;</ion-badge>
+    </ion-button>
+
+    <ion-button routerLink="user" routerDirection="forward">
+      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-toolbar mode="ios" *ngIf="true">
+  <ion-searchbar mode="ios" class="custom"></ion-searchbar>
+</ion-toolbar>
+<!-- </ion-header> -->
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-buttons slot="">
+            <ion-back-button text="Back">Back</ion-back-button>
+          </ion-buttons>
+        </ion-col>
+
+        <ion-col size="6" class="ion-text-center ion-align-self-center">
+          <ion-title>{{ page }}</ion-title>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-buttons slot="">
+            <ion-button>
+              <ion-icon
+                slot="icon-only"
+                name="notifications-outline"
+              ></ion-icon>
+              <ion-badge color="danger" class="notification-dot"
+                >&nbsp;</ion-badge
+              >
+            </ion-button>
+
+            <ion-button routerLink="user" routerDirection="forward">
+              <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-title>{{ page }}</ion-title>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="showSearchBar">
+        <ion-col size="12">
+          <ion-searchbar mode="ios" class="custom"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header> -->

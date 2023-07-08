@@ -1,0 +1,41 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="small">user-profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Back</ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        <ion-badge color="danger" class="notification-dot">&nbsp;</ion-badge>
+      </ion-button>
+      <ion-button routerLink="user" routerDirection="forward">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header [translucent]="true">
+  <app-common-header page="{{pageTitle}}">
+    <ion-back-button>Back</ion-back-button>
+  </app-common-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-select
+        label="Language"
+        value="{{defaultLang}}"
+        placeholder="language"
+        (ionChange)="changeLang($event)"
+      >
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="sv">Swedish</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <h2>{{'test.lang' | translate}}</h2>
+  <h2>{{pageTitle}}</h2>
+  <ion-button (click)="resetAlert()">Show Alert</ion-button>
+</ion-content>

@@ -6,6 +6,8 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { HomePageModule } from '../pages/home/home.module';
+import { CommonComponentModule } from '../modules/common-component/common-component.module';
 
 @NgModule({
   imports: [
@@ -13,8 +15,10 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    // HomePageModule, //i don't even have to add the selector, only doing this shows the component, surprising !!!!!
+    Tab1PageRoutingModule,
+    CommonComponentModule,
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page],
 })
 export class Tab1PageModule {}
