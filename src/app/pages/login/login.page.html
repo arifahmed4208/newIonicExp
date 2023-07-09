@@ -4,6 +4,179 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-button routerLink="/tabs">Login</ion-button>
+<!-- <ion-content [fullscreen]="true"> -->
+<!-- <div class="login-container">
+    <ion-button expand="block" class="ion-margin" shape="round">
+      Login with QR
+    </ion-button>
+    <ion-button expand="block" class="ion-margin" shape="round">
+      Login with Code
+    </ion-button>
+    <ion-row class="ion-justify-content-center ion-margin">
+      <ion-col>
+        <ion-button expand="block" fill="clear" class="login-link">
+          Login with Username/Password
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-button routerLink="/tabs">Login</ion-button> -->
+<!-- <ion-content class="ion-padding">
+    <ion-content class="ion-padding">
+      <div class="login-container">
+        <ion-button
+          expand="block"
+          class="ion-margin"
+          shape="round"
+          (click)="showQRCode()"
+          *ngIf="!showForm"
+        >
+          Login with QR
+        </ion-button>
+        <ion-button
+          expand="block"
+          class="ion-margin"
+          shape="round"
+          (click)="showCodeAvatar()"
+          *ngIf="!showForm"
+        >
+          Login with Code
+        </ion-button>
+        <ion-row class="ion-justify-content-center ion-margin">
+          <ion-col>
+            <ion-button
+              (click)="showUsernamePasswordForm()"
+              expand="block"
+              fill="clear"
+              class="login-link"
+            >
+              Login with Username/Password
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <form *ngIf="showForm" (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input
+              type="text"
+              name="username"
+              [(ngModel)]="username"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+            ></ion-input>
+          </ion-item>
+          <ion-button expand="block" type="submit" class="ion-margin-top"
+            >Login</ion-button
+          >
+        </form>
+
+        <ion-button
+          expand="block"
+          fill="clear"
+          class="ion-margin-top"
+          (click)="showQRCode()"
+          *ngIf="showForm"
+        >
+          Login with QR
+        </ion-button>
+        <ion-button
+          expand="block"
+          fill="clear"
+          class="ion-margin-top"
+          (click)="showCodeAvatar()"
+          *ngIf="showForm"
+        >
+          Login with Code
+        </ion-button>
+        <div class="centered-div" *ngIf="showQR">QR Code</div>
+        <div class="centered-div" *ngIf="showCode">Code Avatar</div>
+      </div>
+    </ion-content>
+  </ion-content> -->
+<!-- </ion-content> -->
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ng-container *ngIf="!showForm">
+      <ion-button
+        expand="block"
+        class="ion-margin"
+        shape="round"
+        (click)="showQRCode()"
+      >
+        Login with QR
+      </ion-button>
+      <ion-button
+        expand="block"
+        class="ion-margin"
+        shape="round"
+        (click)="showCodeAvatar()"
+      >
+        Login with Code
+      </ion-button>
+      <ion-row class="ion-justify-content-center ion-margin">
+        <ion-col>
+          <ion-button
+            (click)="showUsernamePasswordForm()"
+            expand="block"
+            fill="clear"
+            class="login-link"
+          >
+            Login with Username/Password
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <ng-container *ngIf="showForm">
+      <form (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input
+            type="text"
+            name="username"
+            [(ngModel)]="username"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+          ></ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit" class="ion-margin-top"
+          >Login</ion-button
+        >
+      </form>
+      <ion-button
+        expand="block"
+        fill="clear"
+        class="ion-margin-top"
+        (click)="showQRCode()"
+      >
+        Login with QR
+      </ion-button>
+      <ion-button
+        expand="block"
+        fill="clear"
+        class="ion-margin-top"
+        (click)="showCodeAvatar()"
+      >
+        Login with Code
+      </ion-button>
+    </ng-container>
+
+    <div class="centered-div" *ngIf="showQR">QR Code</div>
+    <div class="centered-div" *ngIf="showCode">Code Avatar</div>
+  </div>
 </ion-content>
