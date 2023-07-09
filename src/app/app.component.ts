@@ -9,7 +9,9 @@ import { StatusBar, Style } from '@capacitor/status-bar';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private culture: CultureService) {}
+  constructor(private culture: CultureService) {
+    this.initializeApp();
+  }
 
   async initializeApp() {
     // ... other initialization code
